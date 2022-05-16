@@ -6,6 +6,20 @@ The purpose of this analysis is to use machine learning to help Jill, a lead dat
 
 ## Results
 
+### Naive Oversampling
+
+![image](https://user-images.githubusercontent.com/93399107/168494363-e0f1c66a-6297-47fc-9442-58145a51c74c.png)
+
+### SMOTE Oversampling
+
+![image](https://user-images.githubusercontent.com/93399107/168494621-f2116a93-dca2-4a2a-ae14-c44264ec414a.png)
+
+### Balanced Random Forest
+
+![image](https://user-images.githubusercontent.com/93399107/168606763-4a72b43e-6a15-4958-b62a-0b6aa69b3360.png)
+
 ## Summary
 
-The random forest classifier, with and without AdaBoost, failed to achieve useable performance. The balanced random forest classifier's precision is 0.04, meaning that in 100 loan applications that were flagged to be bad, only 4 were actually bad loan applications. The model's recall/sensitivity is 0.67, meaning that it detected 67% of bad loan applications. The F1 score is low at 0.07, since either a low precision or recall will result in a lower F1 score.The random forest classifier with AdaBoost, while achieving better results, still suffered from inadequate predictive power. Its precision score is 0.09 and its recall 0.92. The F1 score, again, is skewed low at 0.16 by the low precision score.The performances of both models are insufficient for commercial application.
+Naive oversampling had a precision score of 0.01 and recall of 0.62 for high-risk loans. The F1 score was 0.02. SMOTE oversampling had a precision score of 0.01 and recall of 0.61, and a F1 score of 0.02. The undersampling had similar results, with a precision score of 0.01, recall of 0.65, and F1 score of 0.01. Combination sampling resulted in a precision score of 0.01 and recall of 0.70, and a F1 score of 0.02. Although the recall score is better than the other models, the results are still poor. These models would not be the best models for predicting the risk of credit card applications. The random forest classifier with AdaBoost did not yield significantly better results. The precision score is 0.09 and its recall 0.92. The F1 score, again, is skewed low at 0.16 by the low precision score.In summar, the tested models would not be the most usefule models to predict our credit loan risk.
+ 
+
